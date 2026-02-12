@@ -6,9 +6,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-DATABASE_URL = "postgresql://postgres:devansh123@localhost:5432/git_db"
-# DATABASE_URL = "postgresql://postgres:devansh123@db:5432/git_db"
-# DATABASE_URL = os.getenv("DATABASE_URL")
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 
 

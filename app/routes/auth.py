@@ -90,16 +90,16 @@ def login_user(
 @router.get("/users")
 def get_users(db : Session = Depends(get_db),token:str=Depends(oauth2_scheme)):
     
-    token_check = decode_access_token(token)
+    # token_check = decode_access_token(token)
 
-    if not token_check:
+    # if not token_check:
 
 
-        return "the token is invalid or expired"
+        # return "the token is invalid or expired"
     
-    else:
-        print("now printing all users")
-        return db.query(User).all()
+    # else:
+    print("now printing all users")
+    return db.query(User).all()
 
 
 
@@ -117,14 +117,14 @@ def get_user_id(id : int , db : Session = Depends(get_db),token:str=Depends(oaut
         raise HTTPException(404 , "id not found")
     else:
 
-        token_check = decode_access_token(token)
+        # token_check = decode_access_token(token)
 
-    if not token_check:
+    # if not token_check:
 
         
-        return "the token is invalid or expired"
+        # return "the token is invalid or expired"
     
-    else:
+    # else:  
         print("got the id")
         return getting_by_id
 
