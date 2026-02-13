@@ -24,7 +24,7 @@ jobs:
             ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
               cd /home/ubuntu/github_release_monitor
               git pull origin main
-              docker-compose down
-              docker-compose build
-              docker-compose up -d
+              docker compose down
+              docker compose build
+              docker compose up -d
         EOF
