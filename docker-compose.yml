@@ -19,6 +19,14 @@ services:
       - "8000:8000"
     environment:
       DATABASE_URL: postgresql://postgres:devansh123@db:5432/git_db
+      SLACK_WEBHOOK: url of slack
+      SECRET_KEY: devansh123lamaniya
+      SENDERS_EMAIL: devansh.lamaniya@gammaedge.io
+      EMAIL_PASSWORD: dtgmrgruajxuofkz
+      receivers_email: abahay.shukla@gammaedge.io
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devansh123
+      POSTGRES_DB: git_db
     depends_on:
       - db
     volumes:
